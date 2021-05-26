@@ -1,4 +1,13 @@
 # ASP.NET
+- task: AzureCLI@2
+  inputs:
+    azureSubscription: 'Mughundhan-Internal-consumption(7d8756aa-add8-44c4-81ac-6ae600859de2)'
+    scriptType: 'pscore'
+    scriptLocation: 'inlineScript'
+    inlineScript: |
+      Install-Module -Name Az.Resources
+      Import-Module -Name Az.Resources 
+      Invoke-AzResourceAction
 # Build and test ASP.NET projects.
 # Add steps that publish symbols, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/apps/aspnet/build-aspnet-4
